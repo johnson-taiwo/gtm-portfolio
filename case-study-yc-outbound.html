@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YC Founder Outbound System | Johnson Taiwo</title>
+  <meta name="description" content="648 scraped founders. 88 verified emails. 3 copy angles per founder. 0 manual steps. A precision outbound system built end to end.">
+
+  <meta property="og:title" content="YC Founder Outbound System">
+  <meta property="og:description" content="648 scraped founders. 88 verified emails. 3 copy angles per founder. 0 manual steps.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://johnson-taiwo.github.io/gtm-portfolio/case-study-yc-outbound.html">
+  <meta property="og:image" content="assets/project-yc-outbound-thumb.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-brand">Johnson Taiwo<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="nav-cta">LinkedIn →</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <button class="close-menu" id="closeMenu" aria-label="Close menu">✕</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="gold">LinkedIn →</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="cs-article-page">
+    <div class="cs-article-container">
+
+      <div class="cs-back-link">
+        <a href="index.html#work">← Back to Work</a>
+      </div>
+
+      <div class="cs-meta">
+        <span class="tool-tag">GTM Engineering</span>
+        <span class="tool-tag">Clay</span>
+        <span class="tool-tag">Python</span>
+        <span class="tool-tag">Instantly</span>
+        <span class="cs-type">Case Study 02</span>
+      </div>
+
+      <h1 class="cs-article-title">YC Founder Outbound System</h1>
+
+      <p class="cs-article-intro">
+        648 YC founders sourced. 267 companies enriched across funding stage, hiring signals, and competitor data. 3 commercially grounded emails per founder. Automated push to Instantly, 0 manual steps.
+      </p>
+
+      <p class="cs-article-lead">
+        Cold outbound fails because it's generic. The fix isn't better copywriting, it's <strong>better signal before the copy is written.</strong>
+      </p>
+
+      <!-- VIDEO EMBED PLACEHOLDER -->
+      <div class="cs-video-embed">
+        <div class="cs-video-embed-label">Video Walkthrough, replace src with Loom or YouTube embed URL</div>
+        <div class="cs-video-frame">
+          <iframe src="" title="YC Outbound walkthrough" allowfullscreen></iframe>
+          <div class="cs-video-placeholder-text">
+            Replace the iframe src with a Loom or YouTube embed URL
+          </div>
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-section">
+        <h2>1. The Problem</h2>
+        <p>
+          The client, Marcus Reid at Northlane, needed 60–80 personalised cold emails going out automatically to the right YC founders. The target: Seed or Series A, 15–80 employees, founder still closing personally, no VP Sales yet. Demos were happening but conversion only worked when the founder was in the room. The brief was to build this almost entirely free, with minimal Clay spend.
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>2. What Was Built</h2>
+
+        <h3 class="cs-step-heading">Step 1, Scraper</h3>
+        <p>
+          Hit the YC Algolia public endpoint. Filtered by batches W22–S24 and B2B SaaS keywords. Used Playwright to visit each company website and hunt for founder emails via regex. <strong>Result: 648 raw rows → 335 deduplicated companies → 88 emails found without spending a credit.</strong>
+        </p>
+
+        <h3 class="cs-step-heading">Step 2, Funding Enrichment</h3>
+        <p>
+          Multi-source pipeline using Google Search via Apify and SEC EDGAR Form D filings. <strong>Result: 267 of 335 companies enriched (80% coverage).</strong> Confidence tiers assigned: High / Medium / Low / Empty. Targeted Seed and Series A at High or Medium confidence only (~160 rows).
+        </p>
+
+        <h3 class="cs-step-heading">Step 3, Clay Qualification</h3>
+        <p>
+          Hard filters applied before spending a single enrichment credit, Seed/Series A only, 15–80 employees, Demo CTA present on website, VP Sales/Head of Sales/CRO on LinkedIn = row dropped immediately. Clay then ran business intelligence enrichment extracting: buyer persona, trigger moment, competitor, positioning edge, and founder pressure point per row.
+        </p>
+
+        <h3 class="cs-step-heading">Step 4, Copy Generation</h3>
+        <p>
+          Python script generated 3 emails per founder using enriched variables. 335 rows × 3 emails. 50–75 words per email, subjects under 50 characters. Seed and Series A received different closers.
+        </p>
+      </div>
+
+      <div class="cs-article-section cs-sample-copy">
+        <h2>Sample Copy</h2>
+        <p class="cs-sample-intro">Here is a sample sequence built for one founder in the campaign.</p>
+
+        <div class="cs-email-card">
+          <div class="cs-email-label">Email 1, The Mirror</div>
+          <div class="cs-email-body">
+            <p>Hi Achille,</p>
+            <p>Picture this. A growing CFO has spent weeks evaluating tools. They saw FinOps. They saw you. Your product was sharper.</p>
+            <p>But FinOps converted them faster. That growing CFO signed elsewhere.</p>
+            <p>That is not a pipeline problem. It is conversion, and right now it only works because you are the one in the room.</p>
+            <p>I mapped where it breaks for fintech tools at Seed stage. Worth 10 minutes?</p>
+            <p>Marcus</p>
+          </div>
+        </div>
+
+        <div class="cs-email-card">
+          <div class="cs-email-label">Email 2, The Hiring Pressure</div>
+          <div class="cs-email-body">
+            <p>Hi Achille,</p>
+            <p>Following up. Focus on startups and mid-sized businesses suggests a potential challenge in attracting enterprise clients.</p>
+            <p>That usually means growing CFO is still buying the same way, but soon someone other than you will be running those demos.</p>
+            <p>Founders close at 40–50%. First AEs at 15–20%.</p>
+            <p>That gap costs you the exact buyers you worked hardest to reach. Worth a look before it hits your numbers?</p>
+            <p>Marcus</p>
+          </div>
+        </div>
+
+        <div class="cs-email-card">
+          <div class="cs-email-label">Email 3, The Breakup</div>
+          <div class="cs-email-body">
+            <p>Hi Achille,</p>
+            <p>Not sure if this is the right moment for Bujeti.</p>
+            <p>But if growing CFO is slipping after good demos and you are about to hand those conversations to a new hire. That is the window.</p>
+            <p>Happy to share what I found. Otherwise I will leave it here.</p>
+            <p>Marcus</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>3. Three-Email Sequence (Per Founder)</h2>
+        <ul>
+          <li><strong>The Mirror</strong>, buyer choosing a competitor due to a conversion gap, not a feature gap.</li>
+          <li><strong>The Hiring Pressure</strong>, founder close rate vs first AE drop-off, named in numbers.</li>
+          <li><strong>The Breakup</strong>, cost of doing nothing, soft urgency close, no ask.</li>
+        </ul>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>4. Copy Rules (Johnson Taiwo's Framework)</h2>
+        <ul>
+          <li>3–5 word lowercase subject</li>
+          <li>Hook in lines 1–2</li>
+          <li>Problem shown, not told</li>
+          <li>One value prop anchored to proof</li>
+          <li>Soft CTA</li>
+          <li>50–75 words max</li>
+          <li>First-name sign-off only</li>
+        </ul>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>5. Results</h2>
+        <p>
+          Catch-all failure rate reduced from <strong>64% → 17%</strong> after the inference engine rebuild. 15 leads pushed. 2 correctly skipped (no competitor or no verified email). <strong>0 failures. 0 manual input.</strong>
+        </p>
+      </div>
+
+      <!-- SCREENSHOTS GRID -->
+      <div class="cs-screenshots">
+        <div class="cs-screenshots-label">Screenshots</div>
+        <div class="cs-screenshots-grid">
+          <img src="assets/screenshots/yc-outbound-1.png" alt="YC Outbound screenshot 1">
+          <img src="assets/screenshots/yc-outbound-2.png" alt="YC Outbound screenshot 2">
+          <img src="assets/screenshots/yc-outbound-3.png" alt="YC Outbound screenshot 3">
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-closing">
+        <p class="cs-article-statement">
+          Every email that passed could only have been sent to that specific founder. That's not personalisation at scale, that's precision.
+        </p>
+
+        <ul>
+          <li>Python, Playwright, requests, Anthropic API, Apify, custom rate-limit-safe Instantly upsert</li>
+          <li>Clay, qualification gating before enrichment spend</li>
+          <li>Sales-instinct copy framework, translated into 70+ deterministic rules</li>
+          <li>End-to-end automation, scrape → enrich → qualify → write → ship, no manual touch</li>
+        </ul>
+
+        <div class="cs-pitch">
+          <div class="cs-pitch-label">What I'd do at your company</div>
+          <p>
+            I'd build your outbound machine the same way, qualification before enrichment, signal before copy, every email defensible to the prospect's face. Most outbound stacks burn credits on companies that were never going to convert and burn sender reputation on copy that could have been sent to anyone. I'd close both gaps. Your team would spend their time on conversations that already qualify themselves.
+          </p>
+        </div>
+      </div>
+
+      <div class="cs-article-cta">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="cs-cta-btn">Let's Talk →</a>
+        <a href="case-study-cro-agency-gtm.html" class="cs-next-link">Next Case Study: CRO Agency GTM →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:taiwojohnsonakinkunmi@gmail.com">Email</a>
+        <a href="https://github.com/johnson-taiwo" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="footer-copy">© 2026 Johnson Taiwo. Built with Claude Code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

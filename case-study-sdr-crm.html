@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SDR CRM, RevOps Build | Johnson Taiwo</title>
+  <meta name="description" content="A production-grade CRM with mobile app, web dashboard, and AI call summaries, built for $23/month instead of $750.">
+
+  <meta property="og:title" content="SDR CRM, RevOps Build">
+  <meta property="og:description" content="Built a fully functional CRM with mobile app, web dashboard, and AI call summaries, for $23/month instead of $750.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://johnson-taiwo.github.io/gtm-portfolio/case-study-sdr-crm.html">
+  <meta property="og:image" content="assets/project-sdr-crm-thumb.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-brand">Johnson Taiwo<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="nav-cta">LinkedIn →</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <button class="close-menu" id="closeMenu" aria-label="Close menu">✕</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="gold">LinkedIn →</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="cs-article-page">
+    <div class="cs-article-container">
+
+      <div class="cs-back-link">
+        <a href="index.html#work">← Back to Work</a>
+      </div>
+
+      <div class="cs-meta">
+        <span class="tool-tag">RevOps Engineering</span>
+        <span class="tool-tag">Claude Code</span>
+        <span class="tool-tag">Google Sheets</span>
+        <span class="cs-type">Case Study 01</span>
+      </div>
+
+      <h1 class="cs-article-title">SDR CRM, RevOps Build</h1>
+
+      <p class="cs-article-intro">
+        Built a fully functional CRM with mobile app, web dashboard, and AI call summaries, for $23/month instead of $750.
+      </p>
+
+      <p class="cs-article-lead">
+        SDR teams paying <strong>$750+/month for Salesforce</strong> to do what a well-engineered Google Sheets backend can do for almost nothing. This is the production-grade alternative, built to ship, not to demo.
+      </p>
+
+      <!-- VIDEO EMBED PLACEHOLDER -->
+      <div class="cs-video-embed">
+        <div class="cs-video-embed-label">Video Walkthrough, replace src with Loom or YouTube embed URL</div>
+        <div class="cs-video-frame">
+          <iframe src="" title="SDR CRM walkthrough" allowfullscreen></iframe>
+          <div class="cs-video-placeholder-text">
+            Replace the iframe src with a Loom or YouTube embed URL
+          </div>
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-section">
+        <h2>1. The Problem</h2>
+        <p>
+          SDR teams paying $750+/month for Salesforce to do what a well-engineered Google Sheets backend can do for almost nothing. The pain isn't the tool, it's that the founders running these teams know the tool is bloated for what they actually do, but the alternatives all need engineering they don't have.
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>2. What Was Built</h2>
+        <ul>
+          <li><strong>Node.js + Express backend</strong> with Google Sheets as the database, atomic writes, schema-aware row updates, no race conditions.</li>
+          <li><strong>Next.js web CRM</strong>, kanban pipeline (7 stages), lead list, CSV import, real-time polling every 10 seconds.</li>
+          <li><strong>React Native mobile app</strong>, post-call voice memo → Deepgram transcription → Gemini AI summary → auto-logged to Sheet in under 10 seconds.</li>
+          <li><strong>Full pipeline orchestrator</strong>, call happens, SDR records memo, transcript generated, AI summary produced, Sheet updated atomically. End to end, no manual handoffs.</li>
+        </ul>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>3. Hard Problems Solved</h2>
+        <ul>
+          <li><strong>Android suspends microphone during phone calls</strong>, redesigned the entire flow to a post-call voice memo model. SDR taps record, summarises in their own words, ships.</li>
+          <li><strong>Phone numbers with leading + signs stripped by Google Sheets</strong> (treated as formulas), fixed by switching to <code>RAW</code> input on the Sheets API.</li>
+          <li><strong>Gemini hallucinating summaries on empty transcripts</strong>, added an empty-transcript guard before the model call.</li>
+          <li><strong>API key exposure</strong>, the AI key never touches the browser. Next.js Route Handler proxy injects the key server-side, request-by-request.</li>
+        </ul>
+      </div>
+
+      <!-- SCREENSHOTS GRID -->
+      <div class="cs-screenshots">
+        <div class="cs-screenshots-label">Screenshots</div>
+        <div class="cs-screenshots-grid">
+          <img src="assets/screenshots/sdr-crm-1.jpeg" alt="SDR CRM screenshot 1">
+          <img src="assets/screenshots/sdr-crm-2.png" alt="SDR CRM screenshot 2">
+          <img src="assets/screenshots/sdr-crm-3.png" alt="SDR CRM screenshot 3">
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-closing">
+        <p class="cs-article-statement">
+          This isn't a demo. It's a production-grade RevOps tool built with a seller's understanding of what SDRs actually need on a call.
+        </p>
+
+        <ul>
+          <li>Full-stack JS engineering, Node, Next.js, React Native</li>
+          <li>API-first design, Sheets, Deepgram, Gemini, all orchestrated end to end</li>
+          <li>Mobile-first product instinct, built for the second after a call ends, not the dashboard view</li>
+          <li>RevOps cost discipline, $23/mo, not $750/mo, no functional compromise</li>
+        </ul>
+
+        <div class="cs-pitch">
+          <div class="cs-pitch-label">What I'd do at your company</div>
+          <p>
+            I'd build your internal RevOps tools the same way I built this, sales-instinct first, engineering second, vendor bills last. Most SaaS in your stack is paying tax on capability you could ship in two weeks with the right operator. I'd find the three line items where that's most true, and replace them with tools your team actually wants to use. Production-grade, not toy versions, but built without the SaaS markup.
+          </p>
+        </div>
+      </div>
+
+      <div class="cs-article-cta">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="cs-cta-btn">Let's Talk →</a>
+        <a href="case-study-yc-outbound.html" class="cs-next-link">Next Case Study: YC Founder Outbound →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:taiwojohnsonakinkunmi@gmail.com">Email</a>
+        <a href="https://github.com/johnson-taiwo" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="footer-copy">© 2026 Johnson Taiwo. Built with Claude Code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

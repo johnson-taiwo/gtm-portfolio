@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTM System for CRO Agency | Johnson Taiwo</title>
+  <meta name="description" content="A full-stack GTM research and outreach system in Clay, from raw list to personalised, tiered, send-ready output.">
+
+  <meta property="og:title" content="GTM System for CRO Agency">
+  <meta property="og:description" content="Built a full-stack GTM research and outreach system in Clay, from raw list to personalised, tiered, send-ready output.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://johnson-taiwo.github.io/gtm-portfolio/case-study-cro-agency-gtm.html">
+  <meta property="og:image" content="assets/project-cro-agency-thumb.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-brand">Johnson Taiwo<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="nav-cta">LinkedIn →</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <button class="close-menu" id="closeMenu" aria-label="Close menu">✕</button>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="gold">LinkedIn →</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="cs-article-page">
+    <div class="cs-article-container">
+
+      <div class="cs-back-link">
+        <a href="index.html#work">← Back to Work</a>
+      </div>
+
+      <div class="cs-meta">
+        <span class="tool-tag">Clay</span>
+        <span class="tool-tag">GTM Engineering</span>
+        <span class="tool-tag">Commercial Qualification</span>
+        <span class="tool-tag">Copy Assembly</span>
+        <span class="cs-type">Case Study 03</span>
+      </div>
+
+      <h1 class="cs-article-title">GTM System for CRO Agency</h1>
+
+      <p class="cs-article-intro">
+        Built a full-stack GTM research and outreach system in Clay, from raw list to personalised, tiered, send-ready output.
+      </p>
+
+      <p class="cs-article-lead">
+        Service costs <strong>$10k–$22k</strong>. The prospect has to already be spending far more than that on ads, otherwise the conversation is dead before it starts. The buying signal: <strong>high ad spend + no behaviour tools + no A/B testing = money being left on the table.</strong>
+      </p>
+
+      <!-- VIDEO EMBED PLACEHOLDER -->
+      <div class="cs-video-embed">
+        <div class="cs-video-embed-label">Video Walkthrough, replace src with Loom or YouTube embed URL</div>
+        <div class="cs-video-frame">
+          <iframe src="" title="CRO Agency GTM walkthrough" allowfullscreen></iframe>
+          <div class="cs-video-placeholder-text">
+            Replace the iframe src with a Loom or YouTube embed URL
+          </div>
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-section">
+        <h2>1. Commercial Logic</h2>
+        <p>
+          Service costs $10k–$22k. Prospect must already be spending far more than that on ads. The buying signal: high ad spend + no behaviour tools + no A/B testing = money being left on the table. Every column in the system earns its place against that signal, nothing decorative, nothing aspirational.
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>2. The Framework, FETC</h2>
+        <p>
+          <strong>Find → Enrich → Transform → Create &amp; Export.</strong> Each stage gates the next. The output of one stage is the input filter for the next. No row reaches the email assembly layer that hasn't already cleared commercial qualification.
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>3. What Was Built</h2>
+        <ul>
+          <li><strong>Leads sourced directly in Clay and BuiltWith</strong> as the primary data source. Filtered by industry, location, and employee count 30 to 200, US and Canada.</li>
+          <li><strong>BuiltWith tech stack</strong> pulled per company → AI prompt categorized into 18 operational categories as structured JSON.</li>
+          <li><strong>Traffic enrichment</strong> (20k+ visitors only) → Meta and Google ad spend estimated per company.</li>
+          <li><strong>Friction scoring system</strong> (max 11 points) → Critical / High / Moderate / Low verdict + a one-sentence pain summary per row.</li>
+          <li><strong>ClayGent</strong> visiting each website → SKU count, best-seller URL, target audience, real competitor, GRWM ad concept, best customer review.</li>
+          <li><strong>Full email assembled per row</strong> → nested JSON → flattened to columns in Clay.</li>
+          <li><strong>Three-tier output</strong>: Table 1 (ready to send) / Table 2 (copy incomplete) / Table 3 (second wave).</li>
+          <li><strong>One ClayGent prompt engineered</strong> to return all 8 enrichment fields in a single run, tech stack categorization, ICP qualification, ad spend estimation, friction scoring, review mining, review refinement, GRWM concept, and copy assembly variables. Single prompt approach was deliberate: fewer credit calls, same output depth.</li>
+        </ul>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>4. Copy Assembly</h2>
+        <p>
+          Copy variables were nested inside each other before being passed to the email assembly prompt. The reviewer quote fed into the audience line. The competitor fed into the ad strategy hook. The friction score determined the urgency level of the closer. Each email was assembled from live enriched data, not a template with blanks filled in.
+        </p>
+      </div>
+
+      <!-- SCREENSHOTS GRID -->
+      <div class="cs-screenshots">
+        <div class="cs-screenshots-label">Screenshots</div>
+        <div class="cs-screenshots-grid">
+          <img src="assets/screenshots/cro-agency-1.png" alt="CRO Agency GTM screenshot 1">
+          <img src="assets/screenshots/cro-agency-2.png" alt="CRO Agency GTM screenshot 2">
+          <img src="assets/screenshots/cro-agency-3.png" alt="CRO Agency GTM screenshot 3">
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-closing">
+        <p class="cs-article-statement">
+          Three tiered Google Sheets. Fully personalised email per row. Commercial priority, friction signal, and pain summary per company. Built to hand off, not explain.
+        </p>
+
+        <ul>
+          <li>Clay, orchestrating 8 prompts, ClayGent web research, structured JSON across the row</li>
+          <li>Commercial qualification logic, ad spend + tech stack + traffic, scored against the buying signal</li>
+          <li>Copy assembly, every email anchored to a real review, a real competitor, a real ad concept</li>
+          <li>Three-tier output discipline, sales gets clean batches, not a 500-row dump</li>
+        </ul>
+
+        <div class="cs-pitch">
+          <div class="cs-pitch-label">What I'd do at your company</div>
+          <p>
+            I'd build your prospect intelligence the same way, every column earning its place against a buying signal, not a feature. Most GTM workflows are a tour of available enrichments dressed up as research. I'd flip that, start from the commercial logic of the deal, then build only the columns that move a row toward send-ready or out of the list. Your team would open Clay and see priorities, not data.
+          </p>
+        </div>
+      </div>
+
+      <div class="cs-article-cta">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="cs-cta-btn">Let's Talk →</a>
+        <a href="case-study-sdr-crm.html" class="cs-next-link">Next Case Study: SDR CRM →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:taiwojohnsonakinkunmi@gmail.com">Email</a>
+        <a href="https://github.com/johnson-taiwo" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="footer-copy">© 2026 Johnson Taiwo. Built with Claude Code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

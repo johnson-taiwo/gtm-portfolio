@@ -1,0 +1,454 @@
+/* ============================================================
+   Case Study — Article Layout (Royal GTM)
+   Shared by all case-study-*.html pages
+   ============================================================ */
+
+.cs-article-page {
+  padding: 80px 0 120px;
+  background: var(--cream);
+}
+
+.cs-article-container {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.cs-back-link {
+  margin-bottom: 36px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cs-back-link a {
+  color: var(--navy);
+  opacity: 0.6;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.cs-back-link a:hover { opacity: 1; color: var(--gold); }
+
+.cs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+.tool-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.cs-type {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0, 12, 36, 0.5);
+  padding-left: 12px;
+  border-left: 1px solid rgba(0, 12, 36, 0.15);
+}
+
+.cs-article-title {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.cs-article-intro {
+  font-size: clamp(1.15rem, 1.7vw, 1.4rem);
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+
+.cs-article-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(0, 12, 36, 0.78);
+  margin-bottom: 36px;
+}
+
+.cs-article-lead strong { color: var(--navy); font-weight: 700; }
+
+.cs-article-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 12, 36, 0.1);
+  margin: 48px 0;
+}
+
+/* Video embed placeholder */
+
+.cs-video-embed {
+  margin: 40px 0 48px;
+}
+
+.cs-video-embed-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.cs-video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--cream-2);
+}
+
+.cs-video-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.cs-video-frame .cs-video-placeholder-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 12, 36, 0.55);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 24px;
+}
+
+/* Article body sections */
+
+.cs-article-section {
+  margin-bottom: 40px;
+}
+
+.cs-article-section h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 18px;
+  letter-spacing: -0.005em;
+}
+
+.cs-article-section p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(0, 12, 36, 0.85);
+  margin-bottom: 16px;
+}
+
+.cs-article-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.cs-article-section ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(0, 12, 36, 0.85);
+}
+
+.cs-article-section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.cs-article-section ul li strong { color: var(--navy); font-weight: 700; }
+
+/* Step headings inside What Was Built */
+
+.cs-step-heading {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 28px 0 10px;
+  letter-spacing: -0.005em;
+}
+
+.cs-step-heading:first-of-type { margin-top: 8px; }
+
+.cs-article-section p strong { color: var(--navy); font-weight: 700; }
+
+/* Sample copy section — email cards */
+
+.cs-sample-copy { margin-top: 48px; }
+
+.cs-sample-intro {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(0, 12, 36, 0.78);
+  margin-bottom: 28px;
+}
+
+.cs-email-card {
+  background: var(--cream-2);
+  border-left: 3px solid var(--gold);
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  border-radius: 0 4px 4px 0;
+}
+
+.cs-email-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.cs-email-body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--navy);
+}
+
+.cs-email-body p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+
+.cs-email-body p:last-child { margin-bottom: 0; }
+
+/* Screenshots grid */
+
+.cs-screenshots {
+  margin: 48px 0;
+}
+
+.cs-screenshots-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.cs-screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.cs-screenshots-grid img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 12, 36, 0.08);
+  cursor: zoom-in;
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.cs-screenshots-grid img:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold);
+}
+
+/* Lightbox */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 12, 36, 0.92);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  padding: 40px;
+  cursor: zoom-out;
+  backdrop-filter: blur(6px);
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid rgba(184, 134, 11, 0.5);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-size: 1.6rem;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+  z-index: 3001;
+}
+
+.lightbox-close:hover { opacity: 1; }
+
+@media (max-width: 768px) {
+  .lightbox { padding: 20px; }
+  .lightbox-close { top: 16px; right: 18px; font-size: 1.4rem; }
+}
+
+/* Closing argument */
+
+.cs-article-closing {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0, 12, 36, 0.1);
+}
+
+.cs-article-statement {
+  font-size: 1.4rem;
+  font-weight: 700;
+  border-left: 3px solid var(--gold);
+  padding-left: 24px;
+  margin-bottom: 28px;
+  line-height: 1.45;
+  color: var(--navy);
+}
+
+.cs-pitch {
+  background: var(--cream-2);
+  padding: 28px 32px;
+  border-radius: 6px;
+  margin: 32px 0;
+}
+
+.cs-pitch-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.cs-pitch p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* CTA row */
+
+.cs-article-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(0, 12, 36, 0.1);
+  flex-wrap: wrap;
+}
+
+.cs-cta-btn {
+  padding: 14px 28px;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.cs-cta-btn:hover { transform: translateY(-2px); }
+
+.cs-next-link {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s;
+}
+
+.cs-next-link:hover { gap: 10px; }
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+  body { overflow-x: hidden; }
+
+  .cs-article-page { padding: 50px 0 80px; }
+
+  .cs-article-container {
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+
+  .cs-article-title {
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .cs-article-intro {
+    font-size: clamp(1.05rem, 5vw, 1.25rem);
+    line-height: 1.45;
+  }
+
+  .cs-article-section h2 {
+    font-size: clamp(1rem, 5vw, 1.3rem);
+    overflow-wrap: break-word;
+  }
+
+  .cs-article-section p,
+  .cs-article-lead { font-size: 1rem; line-height: 1.7; }
+
+  .cs-screenshots-grid { grid-template-columns: 1fr; gap: 14px; }
+
+  .cs-article-statement { font-size: 1.15rem; padding-left: 18px; }
+
+  .cs-article-cta { flex-direction: column; align-items: stretch; gap: 16px; }
+  .cs-article-cta .cs-cta-btn { justify-content: center; text-align: center; }
+  .cs-article-cta .cs-next-link { justify-content: center; }
+
+  .cs-email-card { padding: 22px 20px 22px 22px; }
+  .cs-email-body { font-size: 0.95rem; line-height: 1.65; }
+  .cs-email-body p { font-size: 0.95rem; line-height: 1.65; }
+  .cs-step-heading { font-size: 0.95rem; }
+}

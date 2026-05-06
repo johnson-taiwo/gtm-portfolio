@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#F8F6F0"/>
+  <rect x="8" y="8" width="784" height="484" fill="none" stroke="#B8860B" stroke-width="3"/>
+  <text x="400" y="240" font-family="Inter, sans-serif" font-weight="800" font-size="32" fill="#000C24" text-anchor="middle" letter-spacing="2">yc-outbound</text>
+  <text x="400" y="280" font-family="Inter, sans-serif" font-weight="600" font-size="18" fill="#B8860B" text-anchor="middle" letter-spacing="2">REPLACE WITH PROJECT THUMBNAIL</text>
+</svg>
