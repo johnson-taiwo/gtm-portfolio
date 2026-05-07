@@ -1,6 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <rect width="800" height="500" fill="#F8F6F0"/>
-  <rect x="8" y="8" width="784" height="484" fill="none" stroke="#B8860B" stroke-width="3"/>
-  <text x="400" y="240" font-family="Inter, sans-serif" font-weight="800" font-size="32" fill="#000C24" text-anchor="middle" letter-spacing="2">yc-outbound</text>
-  <text x="400" y="280" font-family="Inter, sans-serif" font-weight="600" font-size="18" fill="#B8860B" text-anchor="middle" letter-spacing="2">REPLACE WITH PROJECT THUMBNAIL</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="YC Founder Outbound project thumbnail">
+  <rect width="800" height="500" fill="#000C24"/>
+
+  <!-- Corner accents -->
+  <path d="M760,40 L760,80 M760,40 L720,40" stroke="#B8860B" stroke-width="2" fill="none"/>
+  <path d="M40,460 L40,420 M40,460 L80,460" stroke="#B8860B" stroke-width="2" fill="none"/>
+
+  <!-- Eyebrow -->
+  <text x="60" y="80" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#B8860B" letter-spacing="3">CASE STUDY 02</text>
+
+  <!-- Big gold 0 -->
+  <text x="60" y="295" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="220" font-weight="900" fill="#B8860B" letter-spacing="-10">0</text>
+
+  <!-- Right of the 0: claim + supporting metrics -->
+  <text x="260" y="220" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="36" font-weight="900" fill="#FCFBF7" letter-spacing="-1.2">manual steps</text>
+
+  <line x1="260" y1="245" x2="430" y2="245" stroke="#B8860B" stroke-width="1" opacity="0.5"/>
+
+  <text x="260" y="275" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="600" fill="#FCFBF7" opacity="0.75">648 founders sourced</text>
+  <text x="260" y="300" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="600" fill="#FCFBF7" opacity="0.75">267 enriched · 3 emails per</text>
+
+  <!-- Display headline -->
+  <text x="60" y="395" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="40" font-weight="900" fill="#FCFBF7" letter-spacing="-1.2">YC Founder Outbound</text>
+
+  <!-- Footnote -->
+  <text x="60" y="435" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#FCFBF7" opacity="0.55" letter-spacing="2.5">CLAY · PYTHON · ANTHROPIC · INSTANTLY</text>
 </svg>

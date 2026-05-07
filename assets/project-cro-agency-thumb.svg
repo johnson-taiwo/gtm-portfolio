@@ -1,6 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
-  <rect width="800" height="500" fill="#F8F6F0"/>
-  <rect x="8" y="8" width="784" height="484" fill="none" stroke="#B8860B" stroke-width="3"/>
-  <text x="400" y="240" font-family="Inter, sans-serif" font-weight="800" font-size="32" fill="#000C24" text-anchor="middle" letter-spacing="2">cro-agency</text>
-  <text x="400" y="280" font-family="Inter, sans-serif" font-weight="600" font-size="18" fill="#B8860B" text-anchor="middle" letter-spacing="2">REPLACE WITH PROJECT THUMBNAIL</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="GTM System for CRO Agency project thumbnail">
+  <rect width="800" height="500" fill="#FCFBF7"/>
+
+  <!-- Corner accents -->
+  <path d="M760,40 L760,80 M760,40 L720,40" stroke="#B8860B" stroke-width="2" fill="none"/>
+  <path d="M40,460 L40,420 M40,460 L80,460" stroke="#B8860B" stroke-width="2" fill="none"/>
+
+  <!-- Eyebrow -->
+  <text x="60" y="80" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#B8860B" letter-spacing="3">CASE STUDY 03</text>
+
+  <!-- FETC big letters with last gold -->
+  <text x="60" y="230" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="130" font-weight="900" fill="#000C24" letter-spacing="-5">F</text>
+  <text x="180" y="230" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="130" font-weight="900" fill="#000C24" letter-spacing="-5">E</text>
+  <text x="290" y="230" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="130" font-weight="900" fill="#000C24" letter-spacing="-5">T</text>
+  <text x="395" y="230" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="130" font-weight="900" fill="#B8860B" letter-spacing="-5">C</text>
+
+  <!-- Sub-letters -->
+  <text x="60" y="265" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#000C24" opacity="0.7" letter-spacing="2">FIND</text>
+  <text x="180" y="265" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#000C24" opacity="0.7" letter-spacing="2">ENRICH</text>
+  <text x="290" y="265" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#000C24" opacity="0.7" letter-spacing="2">TRANSFORM</text>
+  <text x="395" y="265" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#B8860B" letter-spacing="2">CREATE</text>
+
+  <!-- Three-tier output bars -->
+  <g transform="translate(60, 310)">
+    <rect x="0" y="0" width="240" height="14" fill="#B8860B"/>
+    <rect x="0" y="22" width="170" height="14" fill="#B8860B" opacity="0.55"/>
+    <rect x="0" y="44" width="100" height="14" fill="#B8860B" opacity="0.28"/>
+  </g>
+  <text x="320" y="322" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#000C24" opacity="0.7" letter-spacing="1.5">READY TO SEND</text>
+  <text x="320" y="344" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#000C24" opacity="0.55" letter-spacing="1.5">COPY INCOMPLETE</text>
+  <text x="320" y="366" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#000C24" opacity="0.4" letter-spacing="1.5">SECOND WAVE</text>
+
+  <!-- Display headline -->
+  <text x="60" y="425" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="32" font-weight="900" fill="#000C24" letter-spacing="-1">GTM System for CRO Agency</text>
+
+  <!-- Footnote -->
+  <text x="60" y="460" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#000C24" opacity="0.65" letter-spacing="2.5">CLAY · BUILTWITH · CLAYGENT</text>
 </svg>
