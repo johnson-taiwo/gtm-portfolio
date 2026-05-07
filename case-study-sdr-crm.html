@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SDR CRM, RevOps Build | Johnson Taiwo</title>
-  <meta name="description" content="A production-grade CRM with mobile app, web dashboard, and AI call summaries, built for $23/month instead of $750.">
+  <meta name="description" content="Logging calls always broke my flow. So I built a CRM that does it for me, in one day, for $65 a month.">
 
   <meta property="og:title" content="SDR CRM, RevOps Build">
-  <meta property="og:description" content="Built a fully functional CRM with mobile app, web dashboard, and AI call summaries, for $23/month instead of $750.">
+  <meta property="og:description" content="Built in one day with Claude Code. Mobile-first CRM that auto-logs every call to Google Sheets. $65 a month, not $750.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://johnson-taiwo.github.io/gtm-portfolio/case-study-sdr-crm.html">
   <meta property="og:image" content="assets/project-sdr-crm-thumb.svg">
@@ -63,11 +63,11 @@
       <h1 class="cs-article-title">SDR CRM, RevOps Build</h1>
 
       <p class="cs-article-intro">
-        Built a fully functional CRM with mobile app, web dashboard, and AI call summaries, for $23/month instead of $750.
+        Logging calls always broke my flow. So I built a CRM that does it for me, in one day, for $65 a month.
       </p>
 
       <p class="cs-article-lead">
-        SDR teams paying <strong>$750+/month for Salesforce</strong> to do what a well-engineered Google Sheets backend can do for almost nothing. This is the production-grade alternative, built to ship, not to demo.
+        You hang up, you are in the zone, and then you have to stop, open your CRM, type your notes, set a follow up. By the time you are done you have lost momentum. SDR teams pay <strong>$750+/month for Salesforce</strong> to enforce that exact friction. This is the production-grade alternative, built around the second after a call ends, not the dashboard view.
       </p>
 
       <!-- VIDEO EMBED PLACEHOLDER -->
@@ -83,22 +83,41 @@
       <div class="cs-article-section">
         <h2>1. The Problem</h2>
         <p>
-          SDR teams paying $750+/month for Salesforce to do what a well-engineered Google Sheets backend can do for almost nothing. The pain isn't the tool, it's that the founders running these teams know the tool is bloated for what they actually do, but the alternatives all need engineering they don't have.
+          I have been an SDR and AE for years. The thing that always broke my flow was logging calls. You hang up, you are in the zone, and then you have to stop, open your CRM, type your notes, set a follow up. By the time you are done you have lost momentum.
+        </p>
+        <p>
+          The bloat in $750/month CRMs is not a feature problem. It is a friction problem. They are designed for the dashboard view, not for the second after the call ends.
         </p>
       </div>
 
       <div class="cs-article-section">
-        <h2>2. What Was Built</h2>
+        <h2>2. What I Built</h2>
+        <p>
+          A full CRM, built in one day using Claude Code. Google Sheets as the database. A web app for pipeline management. A mobile app for making calls. <strong>$65 a month to run. Salesforce for the same team is $750.</strong>
+        </p>
         <ul>
           <li><strong>Node.js + Express backend</strong> with Google Sheets as the database, atomic writes, schema-aware row updates, no race conditions.</li>
-          <li><strong>Next.js web CRM</strong>, kanban pipeline (7 stages), lead list, CSV import, real-time polling every 10 seconds.</li>
-          <li><strong>React Native mobile app</strong>, post-call voice memo → Deepgram transcription → Gemini AI summary → auto-logged to Sheet in under 10 seconds.</li>
+          <li><strong>Next.js web CRM</strong>, 7-stage kanban pipeline, lead list, CSV import, real-time Sheets sync.</li>
+          <li><strong>React Native mobile app</strong>, post-call voice memo to Deepgram transcription to Gemini summary, auto-logged to Sheet in under 10 seconds.</li>
           <li><strong>Full pipeline orchestrator</strong>, call happens, SDR records memo, transcript generated, AI summary produced, Sheet updated atomically. End to end, no manual handoffs.</li>
         </ul>
       </div>
 
       <div class="cs-article-section">
-        <h2>3. Hard Problems Solved</h2>
+        <h2>3. The Flow</h2>
+        <p>
+          Open a lead. Tap Call. The phone dialler opens. After the call, tap Record Memo and speak a 20-second summary. Tap Stop and Process.
+        </p>
+        <p>
+          Deepgram transcribes the memo in under 5 seconds. Gemini summarises, identifies the next step, and suggests a stage update. I tap confirm.
+        </p>
+        <p>
+          The Google Sheet auto-updates: summary, transcript, next steps, date, call count. <strong>I did not type a single word.</strong>
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>4. Hard Problems Solved</h2>
         <ul>
           <li><strong>Android suspends microphone during phone calls</strong>, redesigned the entire flow to a post-call voice memo model. SDR taps record, summarises in their own words, ships.</li>
           <li><strong>Phone numbers with leading + signs stripped by Google Sheets</strong> (treated as formulas), fixed by switching to <code>RAW</code> input on the Sheets API.</li>
@@ -121,20 +140,20 @@
 
       <div class="cs-article-closing">
         <p class="cs-article-statement">
-          This isn't a demo. It's a production-grade RevOps tool built with a seller's understanding of what SDRs actually need on a call.
+          I did not type a single word. That is the whole point.
         </p>
 
         <ul>
-          <li>Full-stack JS engineering, Node, Next.js, React Native</li>
+          <li>Full-stack JS engineering in a single day, Node, Next.js, React Native, all shipped</li>
           <li>API-first design, Sheets, Deepgram, Gemini, all orchestrated end to end</li>
           <li>Mobile-first product instinct, built for the second after a call ends, not the dashboard view</li>
-          <li>RevOps cost discipline, $23/mo, not $750/mo, no functional compromise</li>
+          <li>RevOps cost discipline, $65/mo, not $750/mo, no functional compromise</li>
         </ul>
 
         <div class="cs-pitch">
           <div class="cs-pitch-label">What I'd do at your company</div>
           <p>
-            I'd build your internal RevOps tools the same way I built this, sales-instinct first, engineering second, vendor bills last. Most SaaS in your stack is paying tax on capability you could ship in two weeks with the right operator. I'd find the three line items where that's most true, and replace them with tools your team actually wants to use. Production-grade, not toy versions, but built without the SaaS markup.
+            I built this in a day, with Claude Code, around the moment after a call ends. I'd build your internal RevOps tools the same way. Most SaaS in your stack is paying tax on capability you could ship in a week with the right operator. I'd find the three line items where that's most true, and replace them with tools your team actually wants to use. Production-grade, not toy versions, but built without the SaaS markup.
           </p>
         </div>
       </div>
