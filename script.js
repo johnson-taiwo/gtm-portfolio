@@ -17,14 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const close = document.getElementById('closeMenu');
 
   if (toggle && overlay && close) {
+    let savedScrollY = 0;
+
     toggle.addEventListener('click', () => {
+      savedScrollY = window.scrollY;
       overlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('menu-open');
+      document.body.style.top = `-${savedScrollY}px`;
     });
 
     const hide = () => {
       overlay.classList.remove('active');
-      document.body.style.overflow = 'auto';
+      document.body.classList.remove('menu-open');
+      document.body.style.top = '';
+      window.scrollTo(0, savedScrollY);
     };
 
     close.addEventListener('click', hide);
