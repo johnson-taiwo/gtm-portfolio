@@ -140,74 +140,51 @@ a { color: inherit; text-decoration: none; }
   height: 2px;
   background: var(--navy);
   margin: 5px 0;
-  transition: 0.3s;
+  transition: transform 0.25s, opacity 0.25s;
+  transform-origin: center;
 }
+
+.mobile-menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.mobile-menu-toggle.active span:nth-child(2) { opacity: 0; }
+.mobile-menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .mobile-menu-overlay {
   display: none;
-  position: fixed;
-  inset: 0;
   background: var(--navy);
-  z-index: 2000;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  pointer-events: auto;
-  -webkit-overflow-scrolling: touch;
   width: 100%;
-  max-width: 100vw;
-  overflow: hidden;
+  border-top: 1px solid rgba(184, 134, 11, 0.2);
 }
 
-.mobile-menu-overlay.active { display: flex; }
-
-.mobile-menu-overlay .close-menu {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  background: none;
-  border: none;
-  color: var(--cream);
-  font-size: 1.6rem;
-  cursor: pointer;
-  padding: 12px;
-  min-width: 44px;
-  min-height: 44px;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-}
+.mobile-menu-overlay.active { display: block; }
 
 .mobile-nav-links {
   list-style: none;
-  text-align: center;
+  text-align: left;
+  padding: 8px 24px 16px;
 }
 
-.mobile-nav-links li { margin: 14px 0; }
+.mobile-nav-links li {
+  margin: 0;
+  border-bottom: 1px solid rgba(252, 251, 247, 0.08);
+}
+
+.mobile-nav-links li:last-child { border-bottom: none; }
 
 .mobile-nav-links a {
-  display: inline-block;
-  padding: 12px 24px;
+  display: block;
+  padding: 16px 0;
   color: var(--cream);
-  font-size: 1.6rem;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0;
   cursor: pointer;
   touch-action: manipulation;
   -webkit-tap-highlight-color: rgba(184, 134, 11, 0.18);
-  max-width: 90vw;
+  max-width: 100%;
   overflow-wrap: break-word;
 }
 
 .mobile-nav-links a.gold { color: var(--gold); }
-
-/* iOS-safe body scroll lock when mobile menu is open */
-body.menu-open {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  right: 0;
-}
 
 /* ============================================================
    Hero
@@ -767,5 +744,6 @@ body.menu-open {
   .nav-content { padding: 14px 16px; }
   .container { padding: 0 16px !important; }
   .cs-article-container { padding: 0 16px; }
-  .mobile-nav-links a { font-size: 1.3rem; padding: 10px 18px; }
+  .mobile-nav-links { padding: 8px 16px 16px; }
+  .mobile-nav-links a { font-size: 1.05rem; padding: 14px 0; }
 }

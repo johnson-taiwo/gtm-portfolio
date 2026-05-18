@@ -11,29 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
 
-  // Mobile menu
+  // Mobile menu — dropdown panel below the sticky header
   const toggle = document.getElementById('mobileMenuToggle');
   const overlay = document.getElementById('mobileMenuOverlay');
-  const close = document.getElementById('closeMenu');
 
-  if (toggle && overlay && close) {
-    let savedScrollY = 0;
-
+  if (toggle && overlay) {
     toggle.addEventListener('click', () => {
-      savedScrollY = window.scrollY;
-      overlay.classList.add('active');
-      document.body.classList.add('menu-open');
-      document.body.style.top = `-${savedScrollY}px`;
+      const isOpen = overlay.classList.toggle('active');
+      toggle.classList.toggle('active', isOpen);
     });
 
     const hide = () => {
       overlay.classList.remove('active');
-      document.body.classList.remove('menu-open');
-      document.body.style.top = '';
-      window.scrollTo(0, savedScrollY);
+      toggle.classList.remove('active');
     };
 
-    close.addEventListener('click', hide);
     document.querySelectorAll('.mobile-nav-links a').forEach(a =>
       a.addEventListener('click', hide)
     );
