@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full RevOps GTM System | Johnson Taiwo</title>
+  <meta name="description" content="One n8n engine connecting a disjointed revenue stack, Tally, HubSpot, my own SDR CRM, Cal.com, Notion and Slack, into a single full-cycle pipeline. Built, debugged and shipped live in about 4 hours via an n8n MCP.">
+
+  <meta property="og:title" content="Full RevOps GTM System">
+  <meta property="og:description" content="Marketing to sales to AE to CS, automated end to end. Five tools wired into one n8n pipeline with Gemini at every decision point. Built in ~4 hours via an n8n MCP.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://johnson-taiwo.github.io/gtm-portfolio/case-study-full-revops.html">
+  <meta property="og:image" content="assets/project-full-revops-thumb.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-brand">Johnson Taiwo<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="nav-cta">LinkedIn →</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="gold">LinkedIn →</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="cs-article-page">
+    <div class="cs-article-container">
+
+      <div class="cs-back-link">
+        <a href="index.html#work">← Back to Work</a>
+      </div>
+
+      <div class="cs-meta">
+        <span class="tool-tag">RevOps Engineering</span>
+        <span class="tool-tag">n8n MCP</span>
+        <span class="tool-tag">Systems Integration</span>
+        <span class="cs-type">Case Study 04</span>
+      </div>
+
+      <h1 class="cs-article-title">Full RevOps GTM System</h1>
+
+      <p class="cs-article-intro">
+        Every revenue team runs on disjointed tools. I wired five of them into one pipeline, and built, debugged and shipped the whole thing live in about four hours.
+      </p>
+
+      <p class="cs-article-lead">
+        Marketing, sales, AE and customer success each live in their own system, and the handoffs between them are where context goes to die. I built one n8n engine that connects the whole motion end to end, including two projects I had already built separately, my <a href="case-study-sdr-crm.html">SDR CRM</a> and my <a href="case-study-yc-outbound.html">YC Outbound system</a>, plus HubSpot, Cal.com, Notion and Slack. <strong>The entire engine was built programmatically through an n8n MCP, not dragged together by hand in the UI, and it was live in roughly four hours.</strong>
+      </p>
+
+      <!-- SPEED HIGHLIGHT -->
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-num">~4 hrs</div>
+          <div class="cs-stat-label">From empty canvas to a live, tested full-cycle engine</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-num">5 tools</div>
+          <div class="cs-stat-label">Tally, HubSpot, SDR CRM, Cal.com, Notion (plus Slack) on one pipeline</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-num">~50 nodes</div>
+          <div class="cs-stat-label">4 webhook triggers + 1 poll, generated via n8n MCP</div>
+        </div>
+      </div>
+
+      <!-- VIDEO EMBED -->
+      <div class="cs-video-embed">
+        <div class="cs-video-embed-label">Video Walkthrough</div>
+        <div class="cs-video-frame">
+          <iframe src="https://drive.google.com/file/d/1hQZXA3smU4Z4e5oqXcO7YHexpQE9F-yC/preview" title="Full RevOps GTM System walkthrough" allow="autoplay" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-section">
+        <h2>1. The Problem</h2>
+        <p>
+          A revenue team almost never runs on one platform. Marketing sources in one tool, SDRs call and log in another, AEs book and run meetings somewhere else, and customer success onboards in a fourth. Each one is fine on its own. The damage happens in the gaps between them.
+        </p>
+        <p>
+          A lead replies, an SDR calls, a deal gets booked, a deal closes, and at every one of those seams a human has to stop, copy context from one system into the next, and hope nothing is lost. It always is. The AE walks into a call cold. CS re-runs discovery the customer already sat through. The work is not the selling. The work is the manual stitching between disjointed tools and disjointed departments.
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>2. What I Built</h2>
+        <p>
+          One n8n engine that owns every handoff in the revenue motion, marketing to sales to AE to customer success, on a single canvas: four webhook triggers and one polling trigger, roughly fifty nodes, with HubSpot as the system of record and Gemini making a decision at every step.
+        </p>
+        <p>
+          The point that matters most: this is not five tools bought from one vendor. It is five separate systems, including two I had already built as standalone projects, made to behave as one.
+        </p>
+        <ul>
+          <li><strong>Tally → HubSpot intake.</strong> A new interested lead hits a form, gets upserted as a HubSpot contact, has a deal created, and is written into the SDR CRM, in one pass, with email enforced as the join key.</li>
+          <li><strong>My SDR CRM, wired in.</strong> The call-recording CRM from <a href="case-study-sdr-crm.html">its own case study</a> now fires a webhook the moment a call is logged, so the post-call summary flows straight into HubSpot without anyone re-typing it.</li>
+          <li><strong>AI at every decision point.</strong> Gemini writes the SDR pre-call brief, parses the post-call summary into a structured outcome and deal stage, and writes the AE pre-meeting brief, three calls across one cycle.</li>
+          <li><strong>Cal.com → AE handoff.</strong> A booking advances the deal, schedules a prep task, and drops a full pre-meeting brief into the AE's Slack channel.</li>
+          <li><strong>Closed Won → Notion CS handoff.</strong> When a deal closes, a structured onboarding page is created in Notion with the full deal history and the CS team is pinged, so the first onboarding call is not a repeat discovery call.</li>
+        </ul>
+        <p>
+          <strong>And the build itself is the headline.</strong> The whole thing was created by driving an n8n MCP through Claude Code, generating, debugging and testing the workflows programmatically instead of hand-dragging nodes. Empty canvas to a live, end-to-end-tested engine in about four hours.
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>3. How It Flows</h2>
+        <p>
+          A lead comes in through the intake form. Within seconds it is a HubSpot contact with an open deal and a Gemini-written pre-call brief attached, and the SDR sees it in the mobile CRM with a Slack alert already waiting.
+        </p>
+        <p>
+          The SDR calls and logs the call in the CRM. That log fires a webhook into the engine. Gemini turns the summary into a clean outcome, the deal stage moves, a call note is written, and a follow-up task is created, all without a manual update.
+        </p>
+        <p>
+          A meeting gets booked in Cal.com. The deal advances, a prep task lands 30 minutes ahead of the call, and the AE gets a Slack brief covering who they are meeting, where the SDR left off, what to push on, and what to watch for. When the deal is marked Closed Won, a Notion onboarding page is built from the entire deal history and customer success is handed a customer with full context.
+        </p>
+        <p>
+          <strong>From first reply to onboarded customer, nobody copies context between tools by hand.</strong>
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>4. Hard Problems Solved</h2>
+        <ul>
+          <li><strong>Connecting a separately-built CRM.</strong> My SDR CRM is its own project, with its own backend, mobile app and database. Rather than rebuild it inside n8n, I added a fire-and-forget webhook so that the instant a call summary is saved, the engine is triggered. The CRM stays autonomous and never needs to know HubSpot or Slack exist; if the engine is down, the call is still logged locally and nothing is lost.</li>
+          <li><strong>Polling instead of a paid webhook.</strong> Native HubSpot webhooks sit behind an enterprise tier (~$800/month). I used a lightweight 10-minute poll for closed deals with a dedup guard so the same deal can never create two Notion pages, idempotent handoff at zero added cost.</li>
+          <li><strong>One Slack webhook, many channels.</strong> The platform allowed a single incoming webhook, but the team needed alerts split across revenue, AE and customer-success channels. I routed everything through one endpoint using a strict channel convention so each team only sees what is theirs.</li>
+          <li><strong>Standardising on Gemini.</strong> Platform constraints made a single HTTP-based AI integration the clean path, so I standardised every inference on Gemini, brief generation and structured JSON extraction alike, with guards that fail safe on empty or malformed input.</li>
+          <li><strong>Email as the universal join key.</strong> Every system matches on email, so a single missing address would silently corrupt everything downstream. Guard nodes halt the run and alert the team the moment a record arrives without one.</li>
+        </ul>
+      </div>
+
+      <!-- SCREENSHOTS GRID -->
+      <div class="cs-screenshots">
+        <div class="cs-screenshots-label">Screenshots</div>
+        <div class="cs-screenshots-grid">
+          <img src="assets/screenshots/full-revops-1.png" alt="Full RevOps GTM System screenshot 1">
+          <img src="assets/screenshots/full-revops-2.png" alt="Full RevOps GTM System screenshot 2">
+          <img src="assets/screenshots/full-revops-3.png" alt="Full RevOps GTM System screenshot 3">
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-closing">
+        <p class="cs-article-statement">
+          Five disjointed tools, two of them my own projects, made to run as one revenue motion. Built in an afternoon.
+        </p>
+
+        <ul>
+          <li>Systems integration, connecting tools and standalone projects into one coherent pipeline, not another platform to buy</li>
+          <li>RevOps engineering at production scale, multi-trigger orchestration with HubSpot as the system of record</li>
+          <li>AI woven into the workflow, Gemini briefs and structured extraction at every decision point</li>
+          <li>Speed as a discipline, built, debugged, tested and shipped live in ~4 hours via an n8n MCP</li>
+        </ul>
+
+        <div class="cs-pitch">
+          <div class="cs-pitch-label">What I'd do at your company</div>
+          <p>
+            You already pay for the tools. The gaps between them are where deals stall and context leaks. I'd map your revenue motion end to end, find the handoffs that are still manual, and wire them into one engine, using what you already own instead of selling you another platform. And I'd do it in days, not quarters. This whole system went from empty canvas to live in an afternoon, because I build with MCPs, not by hand.
+          </p>
+        </div>
+      </div>
+
+      <div class="cs-article-cta">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="cs-cta-btn">Let's Talk →</a>
+        <a href="case-study-yc-outbound.html" class="cs-next-link">Next Case Study: YC Founder Outbound →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:taiwojohnsonakinkunmi@gmail.com">Email</a>
+        <a href="https://github.com/johnson-taiwo" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="footer-copy">© 2026 Johnson Taiwo. Built with Claude Code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

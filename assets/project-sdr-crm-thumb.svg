@@ -6,7 +6,7 @@
   <path d="M40,460 L40,420 M40,460 L80,460" stroke="#B8860B" stroke-width="2" fill="none"/>
 
   <!-- Eyebrow -->
-  <text x="60" y="80" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#B8860B" letter-spacing="3">CASE STUDY 01</text>
+  <text x="60" y="80" font-family="Inter, system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#B8860B" letter-spacing="3">CASE STUDY 02</text>
 
   <!-- Pipeline visualization: 7 stages, third one gold -->
   <g transform="translate(60, 110)">
