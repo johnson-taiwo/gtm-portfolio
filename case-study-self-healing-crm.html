@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Healing CRM | Johnson Taiwo</title>
+  <meta name="description" content="A two-workflow n8n system that keeps a HubSpot database enriched, graded and reported on, with zero manual intervention after setup. The CRM knows the age of its own data and repairs it.">
+
+  <meta property="og:title" content="Self-Healing CRM">
+  <meta property="og:description" content="CRM data decays 30% a year. Most teams never build the system that knows it's decaying. So I did, two n8n workflows, one canvas, zero manual touches after setup.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://johnson-taiwo.github.io/gtm-portfolio/case-study-self-healing-crm.html">
+  <meta property="og:image" content="assets/project-self-healing-thumb.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-content">
+      <a href="index.html" class="nav-brand">Johnson Taiwo<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="nav-cta">LinkedIn →</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="gold">LinkedIn →</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="cs-article-page">
+    <div class="cs-article-container">
+
+      <div class="cs-back-link">
+        <a href="index.html#work">← Back to Work</a>
+      </div>
+
+      <div class="cs-meta">
+        <span class="tool-tag">RevOps Engineering</span>
+        <span class="tool-tag">n8n MCP</span>
+        <span class="tool-tag">Data Enrichment</span>
+        <span class="cs-type">Case Study 05</span>
+      </div>
+
+      <h1 class="cs-article-title">Self-Healing CRM</h1>
+
+      <p class="cs-article-intro">
+        CRM data decays at 30% a year. The real problem isn't that it decays, it's that most teams never built the system that knows it's decaying. So I built one.
+      </p>
+
+      <p class="cs-article-lead">
+        People change jobs. Titles shift. Emails go cold. And nobody notices until the bounce rate climbs and the sending domain takes the hit. The Self-Healing CRM is two n8n workflows on one canvas that keep a HubSpot database enriched, graded and reported on, <strong>with zero manual intervention after setup.</strong> Built end to end through Claude Code and the n8n MCP, and proven live on a real 55-contact list for <a href="case-study-cro-agency-gtm.html">a B2B client selling to agencies</a>.
+      </p>
+
+      <!-- STAT HIGHLIGHT -->
+      <div class="cs-stat-row">
+        <div class="cs-stat">
+          <div class="cs-stat-num">0 → 38%</div>
+          <div class="cs-stat-label">CRM health score in the first 7 days</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-num">67%</div>
+          <div class="cs-stat-label">Verified-email found rate (14 of 21 contacts, week one)</div>
+        </div>
+        <div class="cs-stat">
+          <div class="cs-stat-num">0 touches</div>
+          <div class="cs-stat-label">Manual intervention required after setup</div>
+        </div>
+      </div>
+
+      <!-- VIDEO EMBED -->
+      <div class="cs-video-embed">
+        <div class="cs-video-embed-label">Video Walkthrough</div>
+        <div class="cs-video-frame">
+          <iframe src="https://drive.google.com/file/d/1KTal4x38TcYN_hFWIPT-aafIMnqElrkI/preview" title="Self-Healing CRM walkthrough" allow="autoplay" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-section">
+        <h2>1. The Problem</h2>
+        <p>
+          CRM data decays at roughly 30% a year. People change jobs, titles, and companies, and a list that was clean at import is aging from day one. The damage is quiet at first: reps burn time on dead numbers, bounce rates climb, and eventually the sending domain's reputation takes the hit, so even the good emails stop landing.
+        </p>
+        <p>
+          The real problem isn't the decay. It's that most teams never built the system that knows it's decaying. Nobody notices until the numbers are already bad. The client here, a B2B SaaS company selling to digital agencies, had 55 contacts pulled into HubSpot from LinkedIn, names and URLs and nothing else. No emails, no firmographics, no enrichment history. The SDR was working a blind list, and no one had touched the CRM since import.
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>2. What I Built</h2>
+        <p>
+          Two n8n workflows on one canvas, with HubSpot as the system of record, Google Sheets as the log, and zero manual intervention after setup.
+        </p>
+        <ul>
+          <li><strong>Workflow one runs every day.</strong> It pulls every contact that has never been enriched or has crossed the age threshold (90 days), cleans the LinkedIn URL, finds a verified email via Prospeo, layers on current job title and seniority from People Data Labs, writes it all back to HubSpot, and logs every action to Google Sheets. If one contact fails, it logs it and keeps going. If the whole run breaks, Slack gets an alert naming the exact node and the exact error.</li>
+          <li><strong>Workflow two runs every Monday.</strong> It reads the enrichment log, pulls live pipeline data straight from HubSpot, hands the numbers to Gemini, and posts a plain-English CRM health report to Slack, contacts re-enriched, emails found, contacts ready for outreach, meetings booked, and a CRM health score.</li>
+          <li><strong>Everything rolls up into a live Looker Studio dashboard.</strong> CRM health over time, grade breakdown, pipeline status, fed directly from Google Sheets. The same numbers that post to Slack, live in HubSpot, and show on the dashboard are always the same numbers. No discrepancies across reporting surfaces.</li>
+        </ul>
+        <p>
+          <strong>Stack:</strong> n8n, HubSpot, Prospeo, People Data Labs, Google Sheets, Gemini, Slack, Looker Studio, built entirely through Claude Code and the n8n MCP, generated and debugged programmatically instead of dragged together by hand.
+        </p>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>3. The Judgment Calls</h2>
+        <p>
+          The interesting part isn't what it does. It's the judgment calls baked into how it does it, each one derived from actually having sat on the sales side of a CRM.
+        </p>
+        <ul>
+          <li><strong>The health score only counts contacts the system can actually enrich,</strong> not every record in the CRM. Guardrails make sure the metric reflects reality, not the size of the database.</li>
+          <li><strong>Every contact resolves to one stable identity through a waterfall:</strong> LinkedIn URL, then email, then name and company, then HubSpot ID as the last resort. Re-enriched contacts are updated in place, never duplicated. Run it a hundred times, one row.</li>
+          <li><strong>When a contact re-enriches, it never touches what the SDR already built.</strong> If a meeting was booked, it stays booked. The system updates the data, it doesn't rewrite the relationship.</li>
+          <li><strong>When something breaks, Slack gets an alert naming the exact node and error.</strong> A broken pipeline nobody knows about is worse than no pipeline. Nothing fails silently.</li>
+          <li><strong>Every configurable variable lives in one node:</strong> refresh cadence, grading thresholds, which population runs. A GTM leader shouldn't need a developer to change how "stale" is defined. One number, one place.</li>
+          <li><strong>The only things that change as volume grows are a key swap and a batch size.</strong> Same workflow, same logic, bigger numbers.</li>
+        </ul>
+      </div>
+
+      <div class="cs-article-section">
+        <h2>4. Hard Problems Solved</h2>
+        <ul>
+          <li><strong>Only trusting verified emails.</strong> Prospeo returns an email with a status; the workflow proceeds only on <code>VERIFIED</code> and treats anything else as no email. A guessed or catch-all address is worse than none, because it's the one that bounces and burns the domain.</li>
+          <li><strong>A LinkedIn guard that saved paid credits.</strong> Without a <code>linkedin_url</code> filter the daily pull returned 72 rows instead of the real 55, and would have wasted paid lookups on ~17 un-enrichable junk records. Requiring the URL up front kept every credit pointed at a record that could actually resolve.</li>
+          <li><strong>Decoding mangled URLs before the API sees them.</strong> LinkedIn URLs from the import arrived percent-encoded, sometimes double-encoded (one carried <code>%25c3%25a4</code>, the letter ä encoded twice). A decode step normalises them so a lookup never silently fails on a corrupted URL.</li>
+          <li><strong>Firmographics into custom properties, not native fields.</strong> People Data Labs' free-text values ("51-200", "marketing and advertising") fail validation against HubSpot's enum dropdowns, so they write to dedicated text properties, keeping the writes clean and the native fields untouched.</li>
+          <li><strong>Logging to Sheets, not HubSpot's activity log,</strong> which is API-limited on the free tier. The sheet is the system's single source of truth and the exact input the weekly report reads from, so the numbers can never drift between surfaces.</li>
+          <li><strong>Rebuilding around a deprecated endpoint.</strong> The original spec targeted a Prospeo endpoint that returned HTTP 400, it had been deprecated. Live-testing every dependency before building surfaced it, and the workflow was rewritten around the current <code>enrich-person</code> endpoint.</li>
+        </ul>
+      </div>
+
+      <!-- SCREENSHOTS GRID -->
+      <div class="cs-screenshots">
+        <div class="cs-screenshots-label">Screenshots</div>
+        <div class="cs-screenshots-grid">
+          <img src="assets/screenshots/self-healing-1.png" alt="Self-Healing CRM screenshot 1, full n8n canvas with WF1 enrichment loop and WF2 weekly report">
+          <img src="assets/screenshots/self-healing-2.png" alt="Self-Healing CRM screenshot 2, weekly Slack health report">
+          <img src="assets/screenshots/self-healing-3.png" alt="Self-Healing CRM screenshot 3, Looker Studio dashboard">
+        </div>
+      </div>
+
+      <hr class="cs-article-divider">
+
+      <div class="cs-article-closing">
+        <p class="cs-article-statement">
+          Most enrichment happens once at import and never again. This system knows its own data age and repairs itself, forever, without anyone pulling a report by hand.
+        </p>
+
+        <ul>
+          <li>RevOps engineering at production scale, two scheduled workflows, idempotent writes, and HubSpot as the system of record</li>
+          <li>Data integrity as a discipline, verified-only emails, waterfall deduplication, update-in-place, and a health score that can't be gamed by duplicates</li>
+          <li>Reporting that never drifts, the same numbers in Slack, HubSpot, and Looker Studio, fed from one logged source of truth</li>
+          <li>Built with MCPs, not by hand, generated, debugged and live-tested against real APIs through Claude Code and the n8n MCP</li>
+        </ul>
+
+        <div class="cs-pitch">
+          <div class="cs-pitch-label">What I'd do at your company</div>
+          <p>
+            Your CRM is decaying right now and nothing is telling you. I'd point this at your list and let it run, repairing what's aging, flagging what's unreachable, and posting a weekly health read to Slack so leadership sees data quality without anyone pulling a report. It runs on free-tier tooling to prove out, and scaling to your volume is a key swap and a batch size, not a rebuild. Same workflow, bigger numbers.
+          </p>
+        </div>
+      </div>
+
+      <div class="cs-article-cta">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener" class="cs-cta-btn">Let's Talk →</a>
+        <a href="case-study-full-revops.html" class="cs-next-link">Next Case Study: Full RevOps GTM System →</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/johnson-taiwo/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:taiwojohnsonakinkunmi@gmail.com">Email</a>
+        <a href="https://github.com/johnson-taiwo" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <p class="footer-copy">© 2026 Johnson Taiwo. Built with Claude Code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

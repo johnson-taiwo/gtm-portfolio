@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Self-Healing CRM dashboard thumbnail">
+  <defs>
+    <linearGradient id="shBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#000C24"/>
+      <stop offset="1" stop-color="#040f2e"/>
+    </linearGradient>
+    <linearGradient id="shArc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B8860B"/>
+      <stop offset="1" stop-color="#e0a92a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#shBg)"/>
+
+  <!-- subtle node-graph backdrop -->
+  <g stroke="#B8860B" stroke-opacity="0.18" stroke-width="2" fill="none">
+    <path d="M110 130 H230 V210"/>
+    <path d="M230 210 H360"/>
+    <path d="M560 300 H680 V200"/>
+    <path d="M560 300 V390 H440"/>
+  </g>
+  <g fill="#B8860B" fill-opacity="0.35">
+    <circle cx="110" cy="130" r="6"/>
+    <circle cx="230" cy="210" r="6"/>
+    <circle cx="680" cy="200" r="6"/>
+    <circle cx="440" cy="390" r="6"/>
+  </g>
+
+  <!-- eyebrow -->
+  <text x="64" y="92" fill="#B8860B" font-family="Inter, sans-serif" font-size="20" font-weight="800" letter-spacing="3">SELF-HEALING CRM</text>
+  <text x="64" y="138" fill="#FCFBF7" font-family="Inter, sans-serif" font-size="40" font-weight="900">The CRM that knows</text>
+  <text x="64" y="186" fill="#FCFBF7" font-family="Inter, sans-serif" font-size="40" font-weight="900">its data is decaying.</text>
+
+  <!-- health gauge -->
+  <g transform="translate(620,250)">
+    <circle r="92" fill="none" stroke="#FCFBF7" stroke-opacity="0.12" stroke-width="16"/>
+    <!-- ~38% arc, starting at top, clockwise -->
+    <path d="M0 -92 A92 92 0 0 1 76 51" fill="none" stroke="url(#shArc)" stroke-width="16" stroke-linecap="round"/>
+    <text x="0" y="2" fill="#FCFBF7" font-family="Inter, sans-serif" font-size="46" font-weight="900" text-anchor="middle">38%</text>
+    <text x="0" y="30" fill="#B8860B" font-family="Inter, sans-serif" font-size="15" font-weight="700" text-anchor="middle" letter-spacing="2">CRM HEALTH</text>
+  </g>
+
+  <!-- refresh loop glyph -->
+  <g transform="translate(120,300)" stroke="#B8860B" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M0 40 A40 40 0 1 1 12 67"/>
+    <path d="M0 40 l-14 -6 m14 6 l6 -14" />
+  </g>
+
+  <!-- stat chips -->
+  <g font-family="Inter, sans-serif">
+    <text x="210" y="300" fill="#FCFBF7" font-size="30" font-weight="900">67%</text>
+    <text x="210" y="324" fill="#FCFBF7" fill-opacity="0.6" font-size="15" font-weight="600">email found rate</text>
+    <text x="210" y="372" fill="#FCFBF7" font-size="30" font-weight="900">0</text>
+    <text x="210" y="396" fill="#FCFBF7" fill-opacity="0.6" font-size="15" font-weight="600">manual touches after setup</text>
+  </g>
+
+  <!-- footer rail -->
+  <text x="64" y="462" fill="#FCFBF7" fill-opacity="0.5" font-family="Inter, sans-serif" font-size="16" font-weight="600">n8n · HubSpot · Prospeo · People Data Labs · Gemini · Slack · Looker Studio</text>
+</svg>
